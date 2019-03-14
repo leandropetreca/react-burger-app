@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './Burger.css';
+import styles from './Burger.module.scss';
 import BurgerIngredient from './BurgerIngredient/BurgerIngredient'
 
 const burger = (props) => {
@@ -16,12 +16,12 @@ const burger = (props) => {
             return arr.concat(el)
         }, []);
 
-    if(transformedIngredients.length == 0) {
+    if(transformedIngredients.length === 0) {
         transformedIngredients = <p>Please start adding ingredients</p>
     }
     
     return (
-        <div className={'Burger'}>        
+        <div className={styles.Burger}>        
 
             <BurgerIngredient type="bread-top" />
             {transformedIngredients}
